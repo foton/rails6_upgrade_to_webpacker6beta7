@@ -31,5 +31,10 @@ module Webpacker6
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+
+    # Prevent Rails from creating asset files when running the generators and scaffolds
+    config.generators do |g|
+      g.assets false
+    end
   end
 end
