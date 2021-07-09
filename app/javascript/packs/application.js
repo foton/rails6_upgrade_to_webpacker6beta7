@@ -12,4 +12,18 @@ Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
 
+
+
+function importAll(r) {
+  r.keys().forEach(r);
+}
+// Add relevant file extensions as needed below.
+// I'm sure there is a better way :shrug:
+//
+// This is needed, otherwise Webpacker throws:
+// Webpacker can't find media/images/logo.svg in /home/foton/workspace/webpacker_6/public/packs/manifest.json. Possible causes:
+importAll(require.context('../media/images/', true, /\.(svg|jpg|gif)$/));
+
+
 console.log('Hello from Webpacker!')
+
